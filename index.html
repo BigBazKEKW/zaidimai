@@ -3,25 +3,64 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>swx</title>
+  <title>Home</title>
   <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
     html, body {
       height: 100%;
-      margin: 0;
+      background-color: #2a2a2a;  /* dark grey */
+      font-family: sans-serif;
     }
+
     body {
       display: flex;
       justify-content: center;
       align-items: center;
-      background: white;
     }
-    p {
-      font-family: sans-serif;
-      font-size: 2rem;
+
+    /* Container for the 6 boxes – 3 per row by default */
+    .games-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+      max-width: 600px;
+      width: 90%;
+    }
+
+    .game-box {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      aspect-ratio: 1 / 1;   /* makes boxes square */
+      background-color: #3a3a3a;
+      color: #e0e0e0;
+      font-size: 1.5rem;
+      font-weight: bold;
+      text-decoration: none;
+      border-radius: 12px;
+      transition: background 0.2s;
+      border: 2px solid #555;
+    }
+
+    .game-box:hover {
+      background-color: #505050;
+      border-color: #888;
     }
   </style>
 </head>
 <body>
-  <p>swx, ok? dq</p>
+  <div class="games-grid">
+    <a href="/test1" class="game-box">test1</a>
+    <a href="/test2" class="game-box">test2</a>
+    <a href="/test3" class="game-box">test3</a>
+    <a href="/test4" class="game-box">test4</a>
+    <a href="/test5" class="game-box">test5</a>
+    <a href="/test6" class="game-box">test6</a>
+  </div>
 </body>
 </html>
