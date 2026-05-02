@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="lt">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Home</title>
+  <title>Žaidimai</title>
   <style>
     * {
       margin: 0;
@@ -13,8 +13,8 @@
 
     html, body {
       height: 100%;
-      background-color: #2a2a2a;  /* dark grey */
-      font-family: sans-serif;
+      background-color: #181818;   /* ultra dark grey */
+      font-family: 'Segoe UI', system-ui, sans-serif;
     }
 
     body {
@@ -23,44 +23,46 @@
       align-items: center;
     }
 
-    /* Container for the 6 boxes – 3 per row by default */
+    /* 2×2 grid */
     .games-grid {
       display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 20px;
-      max-width: 600px;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 24px;
       width: 90%;
+      max-width: 500px;
     }
 
-    .game-box {
+    .game-card {
       display: flex;
       align-items: center;
       justify-content: center;
-      aspect-ratio: 1 / 1;   /* makes boxes square */
-      background-color: #3a3a3a;
-      color: #e0e0e0;
-      font-size: 1.5rem;
-      font-weight: bold;
+      text-align: center;
+      aspect-ratio: 1 / 1;
+      background-color: #222;
+      color: #ddd;
       text-decoration: none;
-      border-radius: 12px;
-      transition: background 0.2s;
-      border: 2px solid #555;
+      font-size: 1.4rem;
+      font-weight: 600;
+      letter-spacing: 0.5px;
+      border-radius: 16px;
+      border: 1px solid #3a3a3a;
+      transition: background 0.2s, border-color 0.2s, transform 0.1s;
+      padding: 1rem;
     }
 
-    .game-box:hover {
-      background-color: #505050;
-      border-color: #888;
+    .game-card:hover {
+      background-color: #2a2a2a;
+      border-color: #555;
+      transform: scale(1.02);
     }
   </style>
 </head>
 <body>
   <div class="games-grid">
-    <a href="/test1" class="game-box">test1</a>
-    <a href="/test2" class="game-box">test2</a>
-    <a href="/test3" class="game-box">test3</a>
-    <a href="/test4" class="game-box">test4</a>
-    <a href="/test5" class="game-box">test5</a>
-    <a href="/test6" class="game-box">test6</a>
+    <a href="/dienos-zodis" class="game-card">Dienos žodis</a>
+    <a href="/dienos-daina" class="game-card">Dienos daina</a>
+    <a href="/panasumas" class="game-card">Panašumas</a>
+    <a href="/daugiau-maziau" class="game-card">Daugiau / mažiau</a>
   </div>
 </body>
 </html>
